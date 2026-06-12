@@ -11,21 +11,21 @@
         flex-direction: column;
         align-items: center;
         padding: 50px;
-        background-color: #82deff;
+        background-color: #fff382;
         font-size: 20px;
     }
 
     a{
-    text-decoration: none;   
-    color: black;
-    background-color: #bedaff;  
-    padding: 10px 20px;      
-    border-radius: 5px;    
-    margin-bottom: 20px;
-    width: 300px;
-    text-align: center;
-}
- 
+        text-decoration: none;
+        color: black;
+        background-color: #fcffbe;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        width: 300px;
+        text-align: center;
+    }
+
     a:hover{
         background-color: #ffffff;
     }
@@ -47,7 +47,7 @@
 
     input[type="submit"]{
         padding: 10px 20px;
-        background-color: #62b7f9e3;
+        background-color: #ff9100e3;
         color: black;
         border: none;
         border-radius: 5px;
@@ -60,7 +60,7 @@
     }
 
     .card {
-        background-color: #8cc2ff;
+        background-color: #fee86c;
         border-radius: 12px;
         padding: 24px 60px;
         text-align: center;
@@ -74,9 +74,8 @@
         margin-top: 0;
     }
 
-    /* ส่วนผลลัพธ์ */
     .result-title {
-        background-color: #62b7f9e3;
+        background-color: #ff9100e3;
         color: black;
         border-radius: 8px;
         padding: 8px 16px;
@@ -107,15 +106,16 @@
     }
     </style>
 </head>
+
 <body>
-    
-    <h1>For Loop</h1>
-    <a href="while.php">While Loop</a>
+    <h1>While Loop</h1>
+    <a href="Index.php">For Loop</a>
+
     <div class="card">
         <h2>คำนวณสูตรคูณ</h2>
 
         <form action="">
-            <input type="number" name="num" placeholder="ใส่เลขแม่สูตรคูณ">
+            <input type="number" name="num" id="" placeholder="ใส่เลขแม่สูตรคูณ">
             <input type="submit" value="คำนวณ">
         </form>
 
@@ -125,14 +125,14 @@
 
                 echo "<div class='result-title'>สูตรคูณแม่ " . $num . "</div><br>";
 
-                for($i = 1; $i <= 12; $i++){
+                $i = 1; 
+                while($i <= 24){
                     echo "<div class='row'>" . $num . " x " . $i . " = <span>" . ($num * $i) . "</span></div>";
+                    $i++;
                 }
             }
         ?>
     </div>
-
-    <h1>งานที่ 1 ธีรภัทร มะคงสุข BIT.2/5 เลขที่ 07</h1>
 
 </body>
 </html>
